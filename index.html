@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S.S Kitchen - FoodCorner</title>
+  
+  <!-- Bootstrap & Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+    }
+
+    .logo img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      color: #e74c3c;
+    }
+
+    .logo-text span {
+      font-size: 14px;
+      font-weight: normal;
+      color: #555;
+    }
+
+    .hero-section {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover no-repeat;
+      height: 220px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-section h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      z-index: 2;
+    }
+
+    .menu-tabs {
+      text-align: center;
+      padding: 1.5rem 0 1rem;
+    }
+
+    .menu-tabs .btn {
+      margin: 0.2rem;
+      font-weight: 500;
+    }
+
+    .menu-item {
+      background: #fff;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 1rem;
+      transition: 0.3s ease;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.02);
+    }
+
+    .menu-item img {
+      width: 65px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 1rem;
+      opacity: 0.85;
+      border: 2px solid #e74c3c;
+    }
+
+    .menu-item h6 {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .menu-item small {
+      color: #666;
+    }
+
+    .menu-item .price {
+      margin-left: auto;
+      color: #e74c3c;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    footer {
+      background: #2c2c2c;
+      color: #fff;
+      padding: 3rem 1rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer h5 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #e74c3c;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    footer .social-icons a {
+      font-size: 20px;
+      margin: 0 0.4rem;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      color: #e74c3c;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar d-flex justify-content-between align-items-center">
+  <div class="logo">
+    <img src="assets/ss_logo.png" alt="Logo">
+    <div class="logo-text">S.S KITCHEN <div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <h1 class="animate__animated animate__fadeInDown">Welcome to<br> S.S Kitchen</h1>
+</section>
+
+<!-- Menu Section -->
+<div class="container py-4">
+  <div class="text-center mb-4">
+    <h3 class="fw-bold">Explore Our Dishes</h3>
+    <p class="text-muted">Taste the difference with every bite.</p>
+  </div>
+
+  <!-- Category Tabs -->
+  <div class="menu-tabs">
+    <button class="btn btn-sm btn-outline-danger active" onclick="filterMenu('all')">ALL</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('starter')">Tandoori Starter</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('mughlai')">Mughlai</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('chinese')">Chinese</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('chicken-tawa')">Chicken Tawa</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('noodles')">Noodles</button>
+	 <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('rice')">Rice</button>
+ <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('roti')">Roti</button>
+  </div>
+
+  <!-- Menu Items -->
+ <div class="container py-2">
+  <div id="menuList" class="row gy-1">
+  
+<!--Starter Items -->
+    <div class="menu-item" data-category="starter">
+      <img src="assets/images/Tandoori-Starter/afghani.jpg" alt="">
+      <div>
+        <h6>Afghani Tandoori</h6>
+        <small>Spicy minced chicken stuffed flatbread.</small>
+      </div>
+      <div class="price">₹120</div>
+    </div>
+
+    <div class="menu-item" data-category="starter">
+      <img src="assets/images/Tandoori-Starter/murg-malai.jpg" alt="">
+      <div>
+        <h6>Murg Malai Tikka</h6>
+        <small>Chicken marinated with cream & cheese.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+
+    <div class="menu-item" data-category="starter">
+      <img src="assets/images/Tandoori-Starter/kasturi-kabab.jpg" alt="">
+      <div>
+        <h6>Kasturi Kabab</h6>
+        <small>Chicken with fenugreek & aromatic spices.</small>
+      </div>
+      <div class="price">₹140</div>
+    </div>
+
+    <div class="menu-item" data-category="starter">
+      <img src="assets/images/Tandoori-Starter/kalmi-kabab.jpg" alt="">
+      <div>
+        <h6>Kalmi Kabab</h6>
+        <small>Drumsticks marinated in rich spices.</small>
+      </div>
+      <div class="price">₹160</div>
+    </div>
+
+    <div class="menu-item" data-category="starter">
+      <img src="assets/images/Tandoori-Starter/rajwadi.jpg" alt="">
+      <div>
+        <h6>Rajwadi Kabab</h6>
+        <small>Flavourful kababs from royal kitchens.</small>
+      </div>
+      <div class="price">₹170</div>
+    </div>
+
+    <div class="menu-item" data-category="starter">
+      <img src="assets/images/Tandoori-Starter/pahadi.jpg" alt="">
+      <div>
+        <h6>Pahadi Kabab</h6>
+        <small>Green chutney marinated grilled chicken.</small>
+      </div>
+      <div class="price">₹130</div>
+    </div>
+
+    <div class="menu-item" data-category="starter">
+      <img src="assets/images/Tandoori-Starter/reshmi.jpg" alt="">
+      <div>
+        <h6>Reshmi Kabab</h6>
+        <small>Soft, juicy kababs with a creamy flavor.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+
+    <div class="menu-item" data-category="starter">
+      <img src="assets/images/Tandoori-Starter/pathani-leg.jpg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	
+	<!--Mughlai Items -->
+   <div class="menu-item" data-category="mughlai">
+      <img src="assets/images/Tandoori-Starter/pathani-leg.jpg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	<div class="menu-item" data-category="mughlai">
+      <img src="assets/images/Tandoori-Starter/pathani-leg.jpg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	
+	<!--Chinese Items -->
+   <div class="menu-item" data-category="chinese">
+      <img src="assets/images/Tandoori-Starter/pathani-leg.jpg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	<div class="menu-item" data-category="chinese">
+      <img src="assets/images/Tandoori-Starter/pathani-leg.jpg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	
+	
+	<!--Chicken Tawa Items -->
+   <div class="menu-item" data-category="chicken-tawa">
+      <img src="assets/images/Chicken-Tawa/Chicken-Tawa.jpg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	<div class="menu-item" data-category="chicken-tawa">
+      <img src="assets/images/Chicken-Tawa/Chicken-Tawa.jpg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	
+		<!--Noodles Items -->
+   <div class="menu-item" data-category="noodles">
+      <img src="assets/images/Noodles/fry-noodles.jpg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	<div class="menu-item" data-category="noodles">
+      <img src="assets/images/Noodles/fry-noodles.jpg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	
+		<!--Rice Items -->
+   <div class="menu-item" data-category="rice">
+      <img src="assets/images/Rice/plain-rice.jpeg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	<div class="menu-item" data-category="rice">
+       <img src="assets/images/Rice/plain-rice.jpeg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	
+		<!--Roti Items -->
+   <div class="menu-item" data-category="roti">
+      <img src="assets/images/Roti/tandoori-roti.jpeg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+	<div class="menu-item" data-category="roti">
+      <img src="assets/images/Roti/tandoori-roti.jpeg" alt="">
+      <div>
+        <h6>Pathani Leg</h6>
+        <small>Perfect starter for your celebrations.</small>
+      </div>
+      <div class="price">₹150</div>
+    </div>
+
+  </div>
+</div>
+
+  
+
+
+<!-- Footer -->
+<footer>
+  <!-- Background Image -->
+  <div style="background: url('https://images.unsplash.com/photo-1626082899554-135af26c28a1') center/cover no-repeat; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.2;"></div>
+
+  <!-- Dark overlay -->
+  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background-color:#000; opacity:0.5; z-index:1;"></div>
+
+  <!-- Footer Content -->
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="row text-center text-md-start text-white py-4">
+      <div class="col-md-4 mb-3">
+        <h5>OPENING HOURS</h5>
+        <p>Monday - Sunday: 6:00 PM - 11:00 PM</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>CONTACT US</h5>
+        <p>
+          <strong>Location:</strong> Opp. Vivanta (Taj), Akota, Vadodara<br>
+          <strong>Phone:</strong> +91 8804 222 789<br>
+          <strong>Email:</strong> info@sskitchen.com
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h5>FOLLOW US</h5>
+        <div class="social-icons mt-2">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      &copy; 2025 S.S Kitchen. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Script -->
+<script>
+  function filterMenu(category) {
+    const buttons = document.querySelectorAll('.menu-tabs button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    const items = document.querySelectorAll('.menu-item');
+    items.forEach(item => {
+      item.style.display = (category === 'all' || item.dataset.category === category) ? 'flex' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>
