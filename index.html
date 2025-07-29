@@ -75,7 +75,7 @@
 
     .menu-tabs {
       text-align: center;
-      padding: 1.5rem 0 1rem;
+      padding: 1rem;
     }
 
     .menu-tabs .btn {
@@ -206,6 +206,15 @@
   display: block;
 }
 
+td, th{
+  text-align: center;
+  font-size: 14px;
+  font-family: system-ui;
+}
+.table thead tr th{
+  background: #e74c3c;
+  color: #fff;
+}
   </style>
 </head>
 <body>
@@ -224,12 +233,11 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container">
   <a class="navbar-brand d-flex flex-column align-items-start" href="#">
-  <div class="d-flex align-items-center">
-    <img src="assets/ss_logo.png" alt="Logo"> 
-    <span class="logo-text">S.S Kitchen</span> <small class="brand-subtext text-muted mt-2 ms-2">Family Restaurant</small>
-  </div>
- 
-</a>
+    <div class="d-flex align-items-center">
+      <img src="assets/ss_logo.png" alt="Logo"> 
+      <span class="logo-text">S S Kitchen</span> <small class="brand-subtext text-muted mt-2 ms-2">Family Restaurant</small>
+    </div>
+  </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -251,8 +259,8 @@
 </section>
 
 <!-- Menu Section -->
-<div class="container py-4">
-  <div class="text-center mb-1">
+<div class="container">
+  <div class="text-center mt-2">
     <h3 class="fw-bold">Explore Our Dishes</h3>
     <p class="text-muted">Taste the difference with every bite.</p>
   </div>
@@ -261,229 +269,677 @@
   <div class="menu-tabs d-flex justify-content-center flex-wrap">
     <!-- <button class="btn btn-sm btn-outline-danger active" onclick="filterMenu('all', event)">ALL</button> -->
     <button class="btn btn-sm btn-outline-secondary active" onclick="filterMenu('starter', event)">Tandoori Starter</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('mughlai', event)">Mughlai</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('chinese', event)">Chinese</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('chicken-tawa', event)">Chicken Tawa</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('noodles', event)">Noodles</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('chinese', event)">Chinese Special</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('tawamaincourse', event)">Tawa Main Course</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('mutton', event)">Mutton Item</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('fish', event)">Fish Item</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('roti', event)">Roti & Cold Drink</button>
+    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('papad', event)">Papad</button>
     <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('rice', event)">Rice</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('roti', event)">Roti</button>
   </div>
 
   <!-- Menu Items -->
 <div id="menuList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mx-1">
-  
-<!--Starter Items -->
-    <div class="menu-item" data-category="starter">
-       <div class="menu-image-wrapper">
-            <img src="assets/images/Tandoori-Starter/afghani.jpg" alt="">
-       </div>
-      <div>
-        <h6>Afghani Tandoori</h6>
-        <small>Spicy minced chicken stuffed flatbread.</small>
-      </div>
-      <div class="price">₹120</div>
+   
+   <div class="menu-item" data-category="starter">
+      <table class="table table-striped menu-table" >
+        <thead >
+          <tr class="t-header">
+            <th>Item Name</th>
+            <th>Half Price</th>
+            <th>Full Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Amdavadi Tandoori</td>
+            <td>₹220</td>
+            <td>₹400</td>
+          </tr>
+          <tr>
+            <td>Pathani Tandoori</td>
+            <td>₹230</td>
+            <td>₹450</td>
+          </tr>
+           <tr>
+            <td>Afghani Tandoori</td>
+            <td>₹250</td>
+            <td>₹480</td>
+          </tr>
+           <tr>
+            <td>Pahadi Tandoori</td>
+            <td>₹250</td>
+            <td>₹480</td>
+          </tr>
+          <tr>
+            <td>Malai Tandoori</td>
+            <td>₹330</td>
+            <td>₹600</td>
+          </tr>
+          <tr>
+            <td>SP. Matka Chicken</td>
+            <td>₹330</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Red Tikka</td>
+            <td>-</td>
+            <td>₹140</td>
+          </tr>
+          <tr>
+            <td>Mumtaj Golden Tikka</td>
+            <td>-</td>
+            <td>₹150</td>
+          </tr>
+          <tr>
+            <td>Green Tikka</td>
+            <td>-</td>
+            <td>₹160</td>
+          </tr>
+          <tr>
+            <td>Malai Tikka</td>
+            <td>-</td>
+            <td>₹300</td>
+          </tr>
+          <tr>
+            <td>Apple Tikka</td>
+            <td>-</td>
+            <td>₹280</td>
+          </tr>
+          <tr>
+            <td>Pahadi Tikka</td>
+            <td>-</td>
+            <td>₹160</td>
+          </tr>
+          <tr>
+            <td>Sizler Tikka</td>
+            <td>-</td>
+            <td>₹260</td>
+          </tr>
+          <tr>
+            <td>Amdavadi Leg</td>
+            <td>₹140</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Pathani Leg</td>
+            <td>₹150</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Afghani Leg</td>
+            <td>₹150</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Pahadi Leg</td>
+            <td>₹160</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Winter Leg</td>
+            <td>₹260</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>SS SP. Leg</td>
+            <td>₹240</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Malai Leg</td>
+            <td>₹280</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Badshah Fish</td>
+            <td>-</td>
+            <td>₹350</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="menu-item" data-category="starter">
-        <div class="menu-image-wrapper">
-           <img src="assets/images/Tandoori-Starter/afghani-leg.jpg" alt="">
-        </div>
+
+    <div class="menu-item" data-category="chinese">
+      <table class="table table-striped menu-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Half Price</th>
+            <th>Full Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chicken Dominos Dry</td>
+            <td>-</td>
+            <td>₹280</td>
+          </tr>
+          <tr>
+            <td>Chicken Kurkure</td>
+            <td>-</td>
+            <td>₹230</td>
+          </tr>
+          <tr>
+            <td>Chicken Lolipop</td>
+            <td>-</td>
+            <td>₹180</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
      
-      <div>
-        <h6>Afghani Leg</h6>
-        <small>Chicken marinated with cream & cheese.</small>
-      </div>
-      <div class="price">₹150</div>
+    <div class="menu-item" data-category="tawamaincourse">
+      <table class="table table-striped menu-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Half Price</th>
+            <th>Full Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chicken Laziz</td>
+            <td>₹230</td>
+            <td>₹420</td>
+          </tr>
+          <tr>
+            <td>Chicken Bhuna</td>
+            <td>₹180</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Chicken Angara</td>
+            <td>₹200</td>
+            <td>₹380</td>
+          </tr>
+          <tr>
+            <td>Chicken Angara B.L</td>
+            <td>₹250</td>
+            <td>₹480</td>
+          </tr>
+          <tr>
+            <td>Butter Chicken</td>
+            <td>₹180</td>
+            <td>₹340</td>
+          </tr>
+          <tr>
+            <td>AMD Tawa Fry</td>
+            <td>₹190</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Chicken Masala</td>
+            <td>₹120</td>
+            <td>₹220</td>
+          </tr>
+          <tr>
+            <td>Kolhapuri Chicken</td>
+            <td>₹260</td>
+            <td>₹500</td>
+          </tr>
+          <tr>
+            <td>Chicken HaraBhara</td>
+            <td>₹160</td>
+            <td>₹300</td>
+          </tr>
+          <tr>
+            <td>Chicken Green</td>
+            <td>₹170</td>
+            <td>₹320</td>
+          </tr>
+          <tr>
+            <td>Chicken Handi</td>
+            <td>₹180</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Chicken Kadai</td>
+            <td>₹180</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Chicken Hangama</td>
+            <td>₹210</td>
+            <td>₹400</td>
+          </tr>
+          <tr>
+            <td>Chicken Chatpata</td>
+            <td>₹170</td>
+            <td>₹320</td>
+          </tr>
+          <tr>
+            <td>Chicken Kashmiri B.L</td>
+            <td>₹190</td>
+            <td>₹360</td>
+          </tr>
+          <tr>
+            <td>Chicken Bombay Tikka</td>
+            <td>-</td>
+            <td>₹360</td>
+          </tr>
+          <tr>
+            <td>Chicken Bombay Tikka</td>
+            <td>-</td>
+            <td>₹360</td>
+          </tr>
+          <tr>
+            <td>Chicken Amrin</td>
+            <td>₹220</td>
+            <td>₹400</td>
+          </tr>
+          <tr>
+            <td>Chicken Lajawab B.L</td>
+            <td>₹230</td>
+            <td>₹420</td>
+          </tr>
+          <tr>
+            <td>Chicken Mumtaj</td>
+            <td>₹260</td>
+            <td>₹500</td>
+          </tr>
+          <tr>
+            <td>Chicken Mumtaj B.L</td>
+            <td>₹280</td>
+            <td>₹530</td>
+          </tr>
+          <tr>
+            <td>Chicken Kasuri B.L</td>
+            <td>₹220</td>
+            <td>₹400</td>
+          </tr>
+          <tr>
+            <td>Chicken Patiyala</td>
+            <td>-</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Chicken Nawabi B.L</td>
+            <td>₹260</td>
+            <td>₹500</td>
+          </tr>
+          <tr>
+            <td>Chicken Ajmeri B.L</td>
+            <td>₹220</td>
+            <td>₹400</td>
+          </tr>
+          <tr>
+            <td>Chicken Dilkhus</td>
+            <td>₹220</td>
+            <td>₹400</td>
+          </tr>
+          <tr>
+            <td>Chicken Anguri</td>
+            <td>-</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Lemon Chicken</td>
+            <td>₹250</td>
+            <td>₹450</td>
+          </tr>
+          <tr>
+            <td>Hydrabadi Chicken</td>
+            <td>₹200</td>
+            <td>₹380</td>
+          </tr>
+          <tr>
+            <td>Lasaniya Chicken</td>
+            <td>₹180</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Chicken Nargis</td>
+            <td>₹220</td>
+            <td>₹400</td>
+          </tr>
+          <tr>
+            <td>Chicken Tikka Masala</td>
+            <td>₹180</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Chicken Tikka Masala</td>
+            <td>-</td>
+            <td>₹520</td>
+          </tr>
+          <tr>
+            <td>Chicken Dhamaka</td>
+            <td>-</td>
+            <td>₹520</td>
+          </tr>
+          <tr>
+            <td>S S Kitchen Special</td>
+            <td>-</td>
+            <td>₹550</td>
+          </tr>
+          <tr>
+            <td>Chicken Amrin Special</td>
+            <td>-</td>
+            <td>₹250</td>
+          </tr>
+          <tr>
+            <td>Chicken Pakiza</td>
+            <td>-</td>
+            <td>₹499</td>
+          </tr>
+          <tr>
+            <td>Chicken Dabba Gous</td>
+            <td>-</td>
+            <td>₹550</td>
+          </tr>
+           <tr>
+            <td>Chicken Changezi</td>
+            <td>-</td>
+            <td>₹490</td>
+          </tr>
+        </tbody>
+      </table>
+   
+
+</div>
+
+
+  <div class="menu-item" data-category="roti">
+      <table class="table table-striped menu-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chapati Roti</td>
+            <td>₹10</td>
+          </tr>
+          <tr>
+            <td>Chapati Butter</td>
+            <td>₹15</td>
+          </tr>
+         <tr>
+            <td>Tandoori</td>
+            <td>₹15</td>
+          </tr>
+          <tr>
+            <td>Tandoori Butter</td>
+            <td>₹20</td>
+          </tr>
+          <tr>
+            <td>Naan</td>
+            <td>₹50</td>
+          </tr>
+          <tr>
+            <td>Butter Naan</td>
+            <td>₹60</td>
+          </tr>
+          <tr>
+            <td>Garlic Naan</td>
+            <td>₹70</td>
+          </tr>
+          <tr>
+            <td>Bullet Naan</td>
+            <td>₹90</td>
+          </tr>
+          <tr>
+            <td>Cheese Naan</td>
+            <td>₹100</td>
+          </tr>
+          <tr>
+            <td>Lachha Paratha</td>
+            <td>₹40</td>
+          </tr>
+          <tr>
+            <td>Kulcha Paratha</td>
+            <td>₹50</td>
+          </tr>
+          <tr>
+            <td>Water Bottle</td>
+            <td>₹20</td>
+          </tr>
+          <tr>
+            <td>Soft Drink</td>
+            <td>₹20</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="menu-item" data-category="starter">
-      <div class="menu-image-wrapper">
-             <img src="assets/images/Tandoori-Starter/ahemadabadi_tandoori.jpg" alt="">
-      </div>
-      <div>
-        <h6>Ahemadabadi Tandoori</h6>
-        <small>Chicken with fenugreek & aromatic spices.</small>
-      </div>
-      <div class="price">₹140</div>
+  <div class="menu-item" data-category="papad">
+      <table class="table table-striped menu-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fry Papad</td>
+            <td>₹15</td>
+          </tr>
+          <tr>
+            <td>Roasted Papad</td>
+            <td>₹10</td>
+          </tr>
+          <tr>
+            <td>Masala Papad</td>
+            <td>₹10</td>
+          </tr>
+          <tr>
+            <td>Laziz Papad</td>
+            <td>₹90</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="menu-item" data-category="starter">
-       <div class="menu-image-wrapper">
-              <img src="assets/images/Tandoori-Starter/malai-tandoori.jpg" alt="">
-       </div>
-      <div>
-        <h6>Malai Tandoori</h6>
-        <small>Drumsticks marinated in rich spices.</small>
-      </div>
-      <div class="price">₹160</div>
+
+    <div class="menu-item" data-category="rice">
+      <table class="table table-striped menu-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Half Price</th>
+            <th>Full Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Matka Biriyani</td>
+            <td>-</td>
+            <td>₹350</td>
+          </tr>
+         <tr>
+            <td>Tawa Biriyani</td>
+            <td>₹120</td>
+            <td>₹180</td>
+          </tr>
+          <tr>
+            <td>Tikka Biriyani</td>
+            <td>₹140</td>
+            <td>₹200</td>
+          </tr>
+          <tr>
+            <td>S S Special Rice</td>
+            <td>-</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Masala Rice</td>
+            <td>₹70</td>
+            <td>₹140</td>
+          </tr>
+          <tr>
+            <td>Dilruba Rice</td>
+            <td>-</td>
+            <td>₹450</td>
+          </tr>
+          <tr>
+            <td>Jira Rice</td>
+            <td>₹60</td>
+            <td>₹120</td>
+          </tr>
+          <tr>
+            <td>Plain Rice</td>
+            <td>₹50</td>
+            <td>₹100</td>
+          </tr>
+          <tr>
+            <td>Zinga Rice</td>
+            <td>₹180</td>
+            <td>₹350</td>
+          </tr>
+          <tr>
+            <td>Mutton Bhuna Rice</td>
+            <td>₹200</td>
+            <td>₹400</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="menu-item" data-category="starter">
-       <div class="menu-image-wrapper">
-        <img src="assets/images/Tandoori-Starter/pahadi-tandoori.jpeg" alt="">
-       </div>
-      <div>
-        <h6>Pahadi Tandoori</h6>
-        <small>Flavourful kababs from royal kitchens.</small>
-      </div>
-      <div class="price">₹170</div>
+
+  <div class="menu-item" data-category="mutton">
+      <table class="table table-striped menu-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Half Price</th>
+            <th>Full Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mutton Laziz</td>
+            <td>₹270</td>
+            <td>₹540</td>
+          </tr>
+          <tr>
+            <td>Mutton Nawabi</td>
+            <td>₹350</td>
+            <td>₹680</td>
+          </tr>
+          <tr>
+            <td>Mutton Pakiza</td>
+            <td>-</td>
+            <td>₹600</td>
+          </tr>
+          <tr>
+            <td>Hydrabadi Mutton</td>
+            <td>₹350</td>
+            <td>₹680</td>
+          </tr>
+          <tr>
+            <td>Mutton Masala</td>
+            <td>₹220</td>
+            <td>₹420</td>
+          </tr>
+          <tr>
+            <td>Mutton Dabba Gous</td>
+            <td>₹300</td>
+            <td>₹600</td>
+          </tr>
+          <tr>
+            <td>Mutton Handi</td>
+            <td>₹250</td>
+            <td>₹500</td>
+          </tr>
+          <tr>
+            <td>Mutton Kadai</td>
+            <td>₹250</td>
+            <td>₹500</td>
+          </tr>
+          <tr>
+            <td>Mutton Angara</td>
+            <td>₹320</td>
+            <td>₹620</td>
+          </tr>
+          <tr>
+            <td>Saudi Mutton</td>
+            <td>₹400</td>
+            <td>₹800</td>
+          </tr>
+          <tr>
+            <td>Bheja Fry</td>
+            <td>-</td>
+            <td>₹180</td>
+          </tr>
+          <tr>
+            <td>Kali Mari Bheja</td>
+            <td>₹150</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Gurda Kaleja</td>
+            <td>₹180</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Darbari</td>
+            <td>₹350</td>
+            <td>-</td>
+          </tr>
+
+        </tbody>
+      </table>
     </div>
 
-    <div class="menu-item" data-category="starter">
-       <div class="menu-image-wrapper">
-        <img src="assets/images/Tandoori-Starter/pathani-leg.jpg" alt="">
-       </div>
-      <div>
-        <h6>Pathani Leg</h6>
-        <small>Green chutney marinated grilled chicken.</small>
-      </div>
-      <div class="price">₹130</div>
+
+  <div class="menu-item" data-category="fish">
+      <table class="table table-striped menu-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Half Price</th>
+            <th>Full Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fish Nariyeli</td>
+            <td>-</td>
+            <td>₹250</td>
+          </tr>
+         <tr>
+            <td>Bornless Fish</td>
+            <td>-</td>
+            <td>₹280</td>
+          </tr>
+          <tr>
+            <td>Fish Masala</td>
+            <td>-</td>
+            <td>₹250</td>
+          </tr>
+          <tr>
+            <td>Fish Fry</td>
+            <td>-</td>
+            <td>₹200</td>
+          </tr>
+          <tr>
+            <td>Zinga Fry</td>
+            <td>₹140</td>
+            <td>₹280</td>
+          </tr>
+          <tr>
+            <td>Zinga Fry</td>
+            <td>₹150</td>
+            <td>₹300</td>
+          </tr>
+          <tr>
+            <td>Fish Bornless Masala</td>
+            <td>-</td>
+            <td>₹340</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <div class="menu-item" data-category="starter">
-       <div class="menu-image-wrapper">
-        <img src="assets/images/Tandoori-Starter/pathani-tandoori.jpg" alt="">
-       </div>
-      <div>
-        <h6>Pathani Tandoori</h6>
-        <small>Soft, juicy kababs with a creamy flavor.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-
-    <div class="menu-item" data-category="starter">
-       <div class="menu-image-wrapper">
-         <img src="assets/images/Tandoori-Starter/periperi-leg.jpg" alt="">
-       </div>
-      <div>
-        <h6>Peri Peri Leg</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-
-     <div class="menu-item" data-category="starter">
-       <div class="menu-image-wrapper">
-         <img src="assets/images/Tandoori-Starter/winter-leg.jpg" alt="">
-       </div>
-      <div>
-        <h6>Winter Leg</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-	
-	<!--Mughlai Items -->
-   <div class="menu-item" data-category="mughlai">
-    <div class="menu-image-wrapper">
-      <img src="assets/images/Tandoori-Starter/pathani-leg.jpg" alt="">
-    </div>
-      <div>
-        <h6>Pathani Leg</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-	
-	
-	<!--Chinese Items -->
+</div>
   
-   <div class="menu-item" data-category="chinese">
-     <div class="menu-image-wrapper">
-       <img src="assets/images/Chinese/fried-rice.jpg" alt="">
-     </div>
-      <div>
-        <h6>Fried Rice</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-     <div class="menu-item" data-category="chinese">
-       <div class="menu-image-wrapper">
-          <img src="assets/images/Chinese/manchurian-dry.jpeg" alt="">
-       </div>
-      <div>
-        <h6>Dry Manchurian</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-	
-	
-	<!--Chicken Tawa Items -->
-   <div class="menu-item" data-category="chicken-tawa">
-    <div class="menu-image-wrapper">
-      <img src="assets/images/Chicken-Tawa/Chicken-Tawa.jpg" alt="">
-    </div>
-      <div>
-        <h6>Tawa Chicken</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-	
-	
-		<!--Noodles Items -->
-   <div class="menu-item" data-category="noodles">
-    <div class="menu-image-wrapper">
-      <img src="assets/images/Noodles/fry-noodles.jpg" alt="">
-    </div>
-      <div>
-        <h6>Fry Noodles</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-	
-	
-		<!--Rice Items -->
-   <div class="menu-item" data-category="rice">
-    <div class="menu-image-wrapper">
-      <img src="assets/images/Rice/plain-rice.jpeg" alt="">
-    </div>
-      <div>
-        <h6>Plain Rice</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-
-     <div class="menu-item" data-category="rice">
-       <div class="menu-image-wrapper">
-        <img src="assets/images/Rice/Jeera-Rice.jpg" alt="">
-       </div>
-      <div>
-        <h6>Jeera Rice</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹150</div>
-    </div>
-	
-	
-		<!--Roti Items -->
-   <div class="menu-item" data-category="roti">
-     <div class="menu-image-wrapper">
-      <img src="assets/images/Roti/tandoori-roti.jpeg" alt="">
-     </div>
-      <div>
-        <h6>Tandoori Roti</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹15</div>
-    </div>
-
-	<div class="menu-item" data-category="roti">
-    <div class="menu-image-wrapper">
-      <img src="assets/images/Roti/chapati.jpg" alt="">
-    </div>
-      <div>
-        <h6>Chapati Roti</h6>
-        <small>Perfect starter for your celebrations.</small>
-      </div>
-      <div class="price">₹10</div>
-    </div>
-
-  </div>
 </div>
 
 <!-- Review Section -->
@@ -512,7 +968,7 @@
       <div class="col-md-4 mb-3">
         <h5>CONTACT US</h5>
         <p>
-          <strong>Location:</strong> Opp. Vivanta (Taj), Akota, Vadodara<br>
+          <strong>Location:</strong> Opp. Hotel Vivanta (Taj), Akota, Vadodara<br>
           <strong>Phone:</strong> +91 8804 222 789<br>
           <strong>Email:</strong> info@sskitchen.com
         </p>
