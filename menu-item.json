@@ -1,0 +1,30 @@
+[
+  {
+    "category": "starter",
+    "items": [
+      {
+        "name": "Afghani Tandoori",
+        "image": "assets/images/Tandoori-Starter/afghani.jpg",
+        "halfPrice": 120,
+        "fullPrice": 200
+      },
+      {
+        "name": "Paneer Tikka",
+        "image": "assets/images/Tandoori-Starter/paneer.jpg",
+        "halfPrice": 130,
+        "fullPrice": 210
+      }
+    ]
+  },
+  {
+    "category": "Main Course",
+    "items": [
+      {
+        "name": "Butter Chicken",
+        "image": "assets/images/Main-Course/butterchicken.jpg",
+        "halfPrice": 160,
+        "fullPrice": 280
+      }
+    ]
+  }
+]

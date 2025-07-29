@@ -190,8 +190,8 @@
 }
 
 .menu-image-wrapper {
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 1rem;
@@ -273,16 +273,25 @@
 <div id="menuList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mx-1">
   
 <!--Starter Items -->
-    <div class="menu-item" data-category="starter">
-       <div class="menu-image-wrapper">
-            <img src="assets/images/Tandoori-Starter/afghani.jpg" alt="">
-       </div>
-      <div>
-        <h6>Afghani Tandoori</h6>
-        <small>Spicy minced chicken stuffed flatbread.</small>
-      </div>
-      <div class="price">₹120</div>
+  <div class="menu-item d-flex justify-content-between align-items-center mb-2 p-2 border rounded" data-category="starter">
+  <!-- Left: Image and Name -->
+  <div class="d-flex align-items-center">
+    <div class="menu-image-wrapper me-2">
+      <img src="assets/images/Tandoori-Starter/afghani.jpg" alt="Afghani Tandoori"
+           style="width: 60px; height: 60px; object-fit: cover; border-radius: 6px;">
     </div>
+<span class="fw-semibold" style="font-size: 0.8rem;">Afghani Tandoori</span>
+  </div>
+
+  <!-- Right: Prices -->
+  <div class="d-flex flex-column align-items-end text-end">
+    <div class="d-flex gap-2">
+      <span class="badge bg-light text-dark px-2 py-1 border rounded">H ₹120</span>
+      <span class="badge bg-light text-dark px-2 py-1 border rounded">F ₹200</span>
+    </div>
+  </div>
+</div>
+
 
     <div class="menu-item" data-category="starter">
         <div class="menu-image-wrapper">

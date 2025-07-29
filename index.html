@@ -21,7 +21,7 @@
 
     .navbar {
       background-color: #fff;
-      padding: 0.8rem 1rem;
+      padding: 0.8rem 0rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
@@ -35,17 +35,18 @@
     }
 
     .navbar-brand img {
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       object-fit: contain;
       margin-right: 8px;
     }
 
     .logo-text {
       font-family: 'Great Vibes', cursive;
-      font-size: 24px;
+      font-size: 22px;
       color: #e74c3c;
     }
+
 
     .hero-section {
       background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover no-repeat;
@@ -75,11 +76,11 @@
 
     .menu-tabs {
       text-align: center;
-      padding: 1rem;
+      /* padding: 1rem; */
     }
 
     .menu-tabs .btn {
-      margin: 0.3rem;
+      margin: .2rem;
       font-weight: 500;
       min-width: 120px;
       transition: all 0.3s ease;
@@ -208,12 +209,13 @@
 
 td, th{
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
   font-family: sans-serif;
 }
 .table thead tr th{
   background: #e74c3c;
   color: #fff;
+   font-size: 13px;
 }
   </style>
 </head>
@@ -260,9 +262,9 @@ td, th{
 
 <!-- Menu Section -->
 <div class="container">
-  <div class="text-center mt-2">
+  <div class="text-center mt-3">
     <h3 class="fw-bold">Explore Our Dishes</h3>
-    <p class="text-muted">Taste the difference with every bite.</p>
+    <p class="text-muted">A journey of flavors in every bites.</p>
   </div>
 
   <!-- Category Tabs -->
@@ -279,8 +281,11 @@ td, th{
   </div>
 
   <!-- Menu Items -->
-<div id="menuList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mx-1">
+<div id="menuList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
    
+  <script src="menu.js"></script>
+
+
    <div class="menu-item" data-category="starter">
       <table class="table table-striped menu-table" >
         <thead >
