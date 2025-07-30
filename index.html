@@ -287,9 +287,9 @@ function renderMenuItems(items, category = '') {
 
   items.forEach(item => {
     const isSinglePriceCategory = ['roti', 'papad'].includes(category);
-    const half = item.half !== undefined ? `₹${item.half}` : '';
-    const full = item.full !== undefined ? `₹${item.full}` : '';
-    const price = item.price !== undefined ? `₹${item.price}` : '';
+    const half = item.half !== null ? `₹${item.half}` : '-';
+    const full = item.full !== null ? `₹${item.full}` : '-';
+    const price = item.price !== null ? `₹${item.price}` : '-';
 
     const priceHTML = isSinglePriceCategory
       ? `<span class="fw-semibold text-dark">${price}</span>` // just one price
