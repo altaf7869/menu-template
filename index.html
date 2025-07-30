@@ -2,151 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>S.S Kitchen - Family Restaurant</title>
-
-  <!-- Bootstrap & Fonts -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S.S Kitchen - Menu</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
-
   <style>
     body, html {
       margin: 0;
-      padding: 0;
+      padding-top: 33px;
       font-family: 'Poppins', sans-serif;
       background: #fffefb;
     }
 
-    .navbar {
-      background-color: #fff;
-      padding: 0.8rem 0rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+  .navbar {
+    position: fixed; /* Use fixed, not sticky */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background-color: #fff;
+    padding: 0.5rem 0rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 8px;
+  }
+
+  .logo-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 22px;
+    color: #e74c3c;
+  }
+
+  .brand-subtext {
+    font-family: 'Great Vibes', cursive;
+    font-size: 12px;
+    color: #e74c3c;
+    letter-spacing: 0.5px;
+  }
+
+.menu-tabs {
+  position: sticky;
+  top: 70px;
+  z-index: 1020;
+  background: #fff;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+  .carousel-caption h5, .carousel-caption p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease forwards;
+    animation-delay: 0.5s;
+    font-family: 'Great Vibes', cursive;
+     z-index: 2;
+
+  }
+
+  .carousel-caption p {
+    animation-delay: 1s;
+  }
+
+  @keyframes fadeSlideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      font-size: 20px;
-    }
-
-    .navbar-brand img {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      margin-right: 8px;
-    }
-
-    .logo-text {
-      font-family: 'Great Vibes', cursive;
-      font-size: 22px;
-      color: #e74c3c;
-    }
-
-
-    .hero-section {
-      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') center/cover no-repeat;
-      height: 240px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .hero-section::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-section h1 {
-       font-family: 'Great Vibes', cursive;
-      font-size: 40px;
-      font-weight: 600;
-      color: white;
-      z-index: 2;
-      animation: fadeInDown 1s ease;
-    }
-
-    .menu-tabs {
-      text-align: center;
-      /* padding: 1rem; */
-    }
-
-    .menu-tabs .btn {
-      margin: .2rem;
-      font-weight: 500;
-      min-width: 120px;
-      transition: all 0.3s ease;
-      border-radius: 25px;
-    }
-
-    .menu-tabs .btn.active,
-    .menu-tabs .btn:hover {
-      background-color: #e74c3c;
-      color: #fff;
-    }
-
+  }
     .menu-item {
+      font-size: 0.85rem;
+      padding: 0.6rem;
       background: #fff;
-      display: flex;
-      align-items: center;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      margin-bottom: 1rem;
-      opacity: 0;
-      transform: translateY(10px);
-      animation: fadeInUp 0.5s ease forwards;
     }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .menu-item:hover {
-      transform: scale(1.02);
-      transition: transform 0.3s ease;
-    }
-
-    .menu-item img {
-      width: 65px;
-      height: 65px;
+    .menu-image-wrapper img {
+      width: 45px;
+      height: 45px;
       object-fit: cover;
-      border-radius: 50%;
-      margin-right: 1rem;
-     /* border: 2px solid #e74c3c; */
-      cursor: pointer;
     }
-
-   
-
-    .menu-item h6 {
-      margin: 0;
-      font-weight: bold;
+    .badge {
+      font-size: 0.7rem;
     }
-
-    .menu-item small {
-      color: #666;
-    }
-
-    .menu-item .price {
-      margin-left: auto;
-      color: #e74c3c;
-      font-weight: bold;
+    .review-btn {
       font-size: 1rem;
+      font-weight: bold;
+      animation: pulse 2s infinite;
     }
-
-    footer {
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+        footer {
       background: #2c2c2c;
       color: #fff;
       padding: 3rem 1rem 2rem;
@@ -177,778 +137,73 @@
       padding-top: 1rem;
       margin-top: 2rem;
     }
-
-    .modal-img {
-      max-width: 100%;
-      border-radius: 12px;
+    .menu-tabs .btn.active {
+      background-color: #e74c3c;
+      color: white;
+      border-color: #e74c3c;
     }
-
-    .brand-subtext {
-      font-family: 'Great Vibes', cursive;
-      font-size: 12px;
-      color: #e74c3c;
-      letter-spacing: 0.5px;
-}
-
-.menu-image-wrapper {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 1rem;
-  border: 2px solid #e74c3c;
-  flex-shrink: 0;
-}
-
-.menu-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-td, th{
-  text-align: center;
-  font-size: 13px;
-  font-family: sans-serif;
-}
-.table thead tr th{
-  background: #e74c3c;
-  color: #fff;
-   font-size: 13px;
-}
   </style>
 </head>
 <body>
 
-
-<!-- Modal -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-transparent border-0">
-      <img id="modalImage" src="" class="modal-img" alt="Popup Image">
-    </div>
-  </div>
-</div>
-
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
+<!-- Fixed Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-  <a class="navbar-brand d-flex flex-column align-items-start" href="#">
-    <div class="d-flex align-items-center">
-      <img src="assets/ss_logo.png" alt="Logo"> 
-      <span class="logo-text">S S Kitchen</span> <small class="brand-subtext text-muted mt-2 ms-2">Family Restaurant</small>
-    </div>
-  </a>
+    <a class="navbar-brand d-flex flex-column align-items-start" href="#">
+      <div class="d-flex align-items-center">
+        <img src="assets/ss_logo.png" alt="Logo">
+        <span class="logo-text">S S Kitchen</span>
+        <small class="brand-subtext text-muted mt-2 ms-2">Family Restaurant</small>
+      </div>
+    </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#menuList">Menu</a></li>
-         <li class="nav-item"><a class="nav-link" href="#reviews">Leave a Review</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Leave a Review</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <h1>Welcome to<br> S.S Kitchen</h1>
-</section>
 
-<!-- Menu Section -->
-<div class="container">
-  <div class="text-center mt-3">
+
+<!-- Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/images/slider-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-block">
+        <h5>Welcome to S.S Kitchen</h5>
+        <p>Experience the Authentic Taste</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/slider-2.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+   
+ <div class="text-center mt-3">
     <h3 class="fw-bold">Explore Our Dishes</h3>
     <p class="text-muted">A journey of flavors in every bites.</p>
   </div>
+<!-- Tabs -->
+<div id="menuTabs" class="menu-tabs d-flex justify-content-center flex-wrap gap-2 px-2 py-3"></div>
 
-  <!-- Category Tabs -->
-  <div class="menu-tabs d-flex justify-content-center flex-wrap">
-    <!-- <button class="btn btn-sm btn-outline-danger active" onclick="filterMenu('all', event)">ALL</button> -->
-    <button class="btn btn-sm btn-outline-secondary active" onclick="filterMenu('starter', event)">Tandoori Starter</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('chinese', event)">Chinese Special</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('tawamaincourse', event)">Tawa Main Course</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('mutton', event)">Mutton Item</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('fish', event)">Fish Item</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('roti', event)">Roti & Cold Drink</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('papad', event)">Papad</button>
-    <button class="btn btn-sm btn-outline-secondary" onclick="filterMenu('rice', event)">Rice</button>
-  </div>
-
-  <!-- Menu Items -->
-<div id="menuList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-   
-  <script src="menu.js"></script>
-
-
-   <div class="menu-item" data-category="starter">
-      <table class="table table-striped menu-table" >
-        <thead >
-          <tr class="t-header">
-            <th>Item Name</th>
-            <th>Half Price</th>
-            <th>Full Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Amdavadi Tandoori</td>
-            <td>₹220</td>
-            <td>₹400</td>
-          </tr>
-          <tr>
-            <td>Pathani Tandoori</td>
-            <td>₹230</td>
-            <td>₹450</td>
-          </tr>
-           <tr>
-            <td>Afghani Tandoori</td>
-            <td>₹250</td>
-            <td>₹480</td>
-          </tr>
-           <tr>
-            <td>Pahadi Tandoori</td>
-            <td>₹250</td>
-            <td>₹480</td>
-          </tr>
-          <tr>
-            <td>Malai Tandoori</td>
-            <td>₹330</td>
-            <td>₹600</td>
-          </tr>
-          <tr>
-            <td>SP. Matka Chicken</td>
-            <td>₹330</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Red Tikka</td>
-            <td>-</td>
-            <td>₹140</td>
-          </tr>
-          <tr>
-            <td>Mumtaj Golden Tikka</td>
-            <td>-</td>
-            <td>₹150</td>
-          </tr>
-          <tr>
-            <td>Green Tikka</td>
-            <td>-</td>
-            <td>₹160</td>
-          </tr>
-          <tr>
-            <td>Malai Tikka</td>
-            <td>-</td>
-            <td>₹300</td>
-          </tr>
-          <tr>
-            <td>Apple Tikka</td>
-            <td>-</td>
-            <td>₹280</td>
-          </tr>
-          <tr>
-            <td>Pahadi Tikka</td>
-            <td>-</td>
-            <td>₹160</td>
-          </tr>
-          <tr>
-            <td>Sizler Tikka</td>
-            <td>-</td>
-            <td>₹260</td>
-          </tr>
-          <tr>
-            <td>Amdavadi Leg</td>
-            <td>₹140</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Pathani Leg</td>
-            <td>₹150</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Afghani Leg</td>
-            <td>₹150</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Pahadi Leg</td>
-            <td>₹160</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Winter Leg</td>
-            <td>₹260</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>SS SP. Leg</td>
-            <td>₹240</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Malai Leg</td>
-            <td>₹280</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Badshah Fish</td>
-            <td>-</td>
-            <td>₹350</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-
-    <div class="menu-item" data-category="chinese">
-      <table class="table table-striped menu-table">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Half Price</th>
-            <th>Full Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Chicken Dominos Dry</td>
-            <td>-</td>
-            <td>₹280</td>
-          </tr>
-          <tr>
-            <td>Chicken Kurkure</td>
-            <td>-</td>
-            <td>₹230</td>
-          </tr>
-          <tr>
-            <td>Chicken Lolipop</td>
-            <td>-</td>
-            <td>₹180</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-     
-    <div class="menu-item" data-category="tawamaincourse">
-      <table class="table table-striped menu-table">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Half Price</th>
-            <th>Full Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Chicken Laziz</td>
-            <td>₹230</td>
-            <td>₹420</td>
-          </tr>
-          <tr>
-            <td>Chicken Bhuna</td>
-            <td>₹180</td>
-            <td>₹350</td>
-          </tr>
-          <tr>
-            <td>Chicken Angara</td>
-            <td>₹200</td>
-            <td>₹380</td>
-          </tr>
-          <tr>
-            <td>Chicken Angara B.L</td>
-            <td>₹250</td>
-            <td>₹480</td>
-          </tr>
-          <tr>
-            <td>Butter Chicken</td>
-            <td>₹180</td>
-            <td>₹340</td>
-          </tr>
-          <tr>
-            <td>AMD Tawa Fry</td>
-            <td>₹190</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Chicken Masala</td>
-            <td>₹120</td>
-            <td>₹220</td>
-          </tr>
-          <tr>
-            <td>Kolhapuri Chicken</td>
-            <td>₹260</td>
-            <td>₹500</td>
-          </tr>
-          <tr>
-            <td>Chicken HaraBhara</td>
-            <td>₹160</td>
-            <td>₹300</td>
-          </tr>
-          <tr>
-            <td>Chicken Green</td>
-            <td>₹170</td>
-            <td>₹320</td>
-          </tr>
-          <tr>
-            <td>Chicken Handi</td>
-            <td>₹180</td>
-            <td>₹350</td>
-          </tr>
-          <tr>
-            <td>Chicken Kadai</td>
-            <td>₹180</td>
-            <td>₹350</td>
-          </tr>
-          <tr>
-            <td>Chicken Hangama</td>
-            <td>₹210</td>
-            <td>₹400</td>
-          </tr>
-          <tr>
-            <td>Chicken Chatpata</td>
-            <td>₹170</td>
-            <td>₹320</td>
-          </tr>
-          <tr>
-            <td>Chicken Kashmiri B.L</td>
-            <td>₹190</td>
-            <td>₹360</td>
-          </tr>
-          <tr>
-            <td>Chicken Bombay Tikka</td>
-            <td>-</td>
-            <td>₹360</td>
-          </tr>
-          <tr>
-            <td>Chicken Bombay Tikka</td>
-            <td>-</td>
-            <td>₹360</td>
-          </tr>
-          <tr>
-            <td>Chicken Amrin</td>
-            <td>₹220</td>
-            <td>₹400</td>
-          </tr>
-          <tr>
-            <td>Chicken Lajawab B.L</td>
-            <td>₹230</td>
-            <td>₹420</td>
-          </tr>
-          <tr>
-            <td>Chicken Mumtaj</td>
-            <td>₹260</td>
-            <td>₹500</td>
-          </tr>
-          <tr>
-            <td>Chicken Mumtaj B.L</td>
-            <td>₹280</td>
-            <td>₹530</td>
-          </tr>
-          <tr>
-            <td>Chicken Kasuri B.L</td>
-            <td>₹220</td>
-            <td>₹400</td>
-          </tr>
-          <tr>
-            <td>Chicken Patiyala</td>
-            <td>-</td>
-            <td>₹350</td>
-          </tr>
-          <tr>
-            <td>Chicken Nawabi B.L</td>
-            <td>₹260</td>
-            <td>₹500</td>
-          </tr>
-          <tr>
-            <td>Chicken Ajmeri B.L</td>
-            <td>₹220</td>
-            <td>₹400</td>
-          </tr>
-          <tr>
-            <td>Chicken Dilkhus</td>
-            <td>₹220</td>
-            <td>₹400</td>
-          </tr>
-          <tr>
-            <td>Chicken Anguri</td>
-            <td>-</td>
-            <td>₹350</td>
-          </tr>
-          <tr>
-            <td>Lemon Chicken</td>
-            <td>₹250</td>
-            <td>₹450</td>
-          </tr>
-          <tr>
-            <td>Hydrabadi Chicken</td>
-            <td>₹200</td>
-            <td>₹380</td>
-          </tr>
-          <tr>
-            <td>Lasaniya Chicken</td>
-            <td>₹180</td>
-            <td>₹350</td>
-          </tr>
-          <tr>
-            <td>Chicken Nargis</td>
-            <td>₹220</td>
-            <td>₹400</td>
-          </tr>
-          <tr>
-            <td>Chicken Tikka Masala</td>
-            <td>₹180</td>
-            <td>₹350</td>
-          </tr>
-          <tr>
-            <td>Chicken Tikka Masala</td>
-            <td>-</td>
-            <td>₹520</td>
-          </tr>
-          <tr>
-            <td>Chicken Dhamaka</td>
-            <td>-</td>
-            <td>₹520</td>
-          </tr>
-          <tr>
-            <td>S S Kitchen Special</td>
-            <td>-</td>
-            <td>₹550</td>
-          </tr>
-          <tr>
-            <td>Chicken Amrin Special</td>
-            <td>-</td>
-            <td>₹250</td>
-          </tr>
-          <tr>
-            <td>Chicken Pakiza</td>
-            <td>-</td>
-            <td>₹499</td>
-          </tr>
-          <tr>
-            <td>Chicken Dabba Gous</td>
-            <td>-</td>
-            <td>₹550</td>
-          </tr>
-           <tr>
-            <td>Chicken Changezi</td>
-            <td>-</td>
-            <td>₹490</td>
-          </tr>
-        </tbody>
-      </table>
-   
-
-</div>
-
-
-  <div class="menu-item" data-category="roti">
-      <table class="table table-striped menu-table">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Chapati Roti</td>
-            <td>₹10</td>
-          </tr>
-          <tr>
-            <td>Chapati Butter</td>
-            <td>₹15</td>
-          </tr>
-         <tr>
-            <td>Tandoori</td>
-            <td>₹15</td>
-          </tr>
-          <tr>
-            <td>Tandoori Butter</td>
-            <td>₹20</td>
-          </tr>
-          <tr>
-            <td>Naan</td>
-            <td>₹50</td>
-          </tr>
-          <tr>
-            <td>Butter Naan</td>
-            <td>₹60</td>
-          </tr>
-          <tr>
-            <td>Garlic Naan</td>
-            <td>₹70</td>
-          </tr>
-          <tr>
-            <td>Bullet Naan</td>
-            <td>₹90</td>
-          </tr>
-          <tr>
-            <td>Cheese Naan</td>
-            <td>₹100</td>
-          </tr>
-          <tr>
-            <td>Lachha Paratha</td>
-            <td>₹40</td>
-          </tr>
-          <tr>
-            <td>Kulcha Paratha</td>
-            <td>₹50</td>
-          </tr>
-          <tr>
-            <td>Water Bottle</td>
-            <td>₹20</td>
-          </tr>
-          <tr>
-            <td>Soft Drink</td>
-            <td>₹20</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-  <div class="menu-item" data-category="papad">
-      <table class="table table-striped menu-table">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Fry Papad</td>
-            <td>₹15</td>
-          </tr>
-          <tr>
-            <td>Roasted Papad</td>
-            <td>₹10</td>
-          </tr>
-          <tr>
-            <td>Masala Papad</td>
-            <td>₹10</td>
-          </tr>
-          <tr>
-            <td>Laziz Papad</td>
-            <td>₹90</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-
-    <div class="menu-item" data-category="rice">
-      <table class="table table-striped menu-table">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Half Price</th>
-            <th>Full Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Matka Biriyani</td>
-            <td>-</td>
-            <td>₹350</td>
-          </tr>
-         <tr>
-            <td>Tawa Biriyani</td>
-            <td>₹120</td>
-            <td>₹180</td>
-          </tr>
-          <tr>
-            <td>Tikka Biriyani</td>
-            <td>₹140</td>
-            <td>₹200</td>
-          </tr>
-          <tr>
-            <td>S S Special Rice</td>
-            <td>-</td>
-            <td>₹350</td>
-          </tr>
-          <tr>
-            <td>Masala Rice</td>
-            <td>₹70</td>
-            <td>₹140</td>
-          </tr>
-          <tr>
-            <td>Dilruba Rice</td>
-            <td>-</td>
-            <td>₹450</td>
-          </tr>
-          <tr>
-            <td>Jira Rice</td>
-            <td>₹60</td>
-            <td>₹120</td>
-          </tr>
-          <tr>
-            <td>Plain Rice</td>
-            <td>₹50</td>
-            <td>₹100</td>
-          </tr>
-          <tr>
-            <td>Zinga Rice</td>
-            <td>₹180</td>
-            <td>₹350</td>
-          </tr>
-          <tr>
-            <td>Mutton Bhuna Rice</td>
-            <td>₹200</td>
-            <td>₹400</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-
-  <div class="menu-item" data-category="mutton">
-      <table class="table table-striped menu-table">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Half Price</th>
-            <th>Full Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Mutton Laziz</td>
-            <td>₹270</td>
-            <td>₹540</td>
-          </tr>
-          <tr>
-            <td>Mutton Nawabi</td>
-            <td>₹350</td>
-            <td>₹680</td>
-          </tr>
-          <tr>
-            <td>Mutton Pakiza</td>
-            <td>-</td>
-            <td>₹600</td>
-          </tr>
-          <tr>
-            <td>Hydrabadi Mutton</td>
-            <td>₹350</td>
-            <td>₹680</td>
-          </tr>
-          <tr>
-            <td>Mutton Masala</td>
-            <td>₹220</td>
-            <td>₹420</td>
-          </tr>
-          <tr>
-            <td>Mutton Dabba Gous</td>
-            <td>₹300</td>
-            <td>₹600</td>
-          </tr>
-          <tr>
-            <td>Mutton Handi</td>
-            <td>₹250</td>
-            <td>₹500</td>
-          </tr>
-          <tr>
-            <td>Mutton Kadai</td>
-            <td>₹250</td>
-            <td>₹500</td>
-          </tr>
-          <tr>
-            <td>Mutton Angara</td>
-            <td>₹320</td>
-            <td>₹620</td>
-          </tr>
-          <tr>
-            <td>Saudi Mutton</td>
-            <td>₹400</td>
-            <td>₹800</td>
-          </tr>
-          <tr>
-            <td>Bheja Fry</td>
-            <td>-</td>
-            <td>₹180</td>
-          </tr>
-          <tr>
-            <td>Kali Mari Bheja</td>
-            <td>₹150</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Gurda Kaleja</td>
-            <td>₹180</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Darbari</td>
-            <td>₹350</td>
-            <td>-</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-
-  <div class="menu-item" data-category="fish">
-      <table class="table table-striped menu-table">
-        <thead>
-          <tr>
-            <th>Item Name</th>
-            <th>Half Price</th>
-            <th>Full Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Fish Nariyeli</td>
-            <td>-</td>
-            <td>₹250</td>
-          </tr>
-         <tr>
-            <td>Bornless Fish</td>
-            <td>-</td>
-            <td>₹280</td>
-          </tr>
-          <tr>
-            <td>Fish Masala</td>
-            <td>-</td>
-            <td>₹250</td>
-          </tr>
-          <tr>
-            <td>Fish Fry</td>
-            <td>-</td>
-            <td>₹200</td>
-          </tr>
-          <tr>
-            <td>Zinga Fry</td>
-            <td>₹140</td>
-            <td>₹280</td>
-          </tr>
-          <tr>
-            <td>Zinga Fry</td>
-            <td>₹150</td>
-            <td>₹300</td>
-          </tr>
-          <tr>
-            <td>Fish Bornless Masala</td>
-            <td>-</td>
-            <td>₹340</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-</div>
-  
-</div>
+<!-- Menu List -->
+<div id="menuList" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-1 px-3"></div>
 
 <!-- Review Section -->
-<section class="py-5" style="background-color: #fff5f2;" id="reviews">
+<section class="py-5 mt-3" style="background-color: #fff5f2;" id="reviews">
   <div class="container text-center">
     <h2 class="fw-bold mb-3" style="font-family: 'Great Vibes', cursive; color: #e74c3c;">Loved Our Food?</h2>
     <p class="text-muted mb-4 fs-5">Your feedback helps us serve you better. Share your experience!</p>
@@ -973,17 +228,17 @@ td, th{
       <div class="col-md-4 mb-3">
         <h5>CONTACT US</h5>
         <p>
-          <strong>Location:</strong> Opp. Hotel Vivanta (Taj), Akota, Vadodara<br>
-          <strong>Phone:</strong> +91 8804 222 789<br>
+          <strong>Location:</strong> Sh. No. A-7, Shreya Avenue, Akota Garden Main Rd, opp. Shell petrol pump, Pratham Avenue, Akota, Vadodara, Gujarat 390020<br>
+          <br>
+          <strong>Phone:</strong> +91 7878662277 <br> +91 8401015874<br>
           <!-- <strong>Email:</strong> info@sskitchen.com -->
         </p>
+        
       </div>
       <div class="col-md-4">
         <h5>FOLLOW US</h5>
         <div class="social-icons mt-2">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.instagram.com/s.s_kitchen_akota?igsh=MXNraHg0ZHR0N3E5aQ=="><i class="bi bi-instagram"></i></a>
           <a href="#"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
@@ -993,51 +248,92 @@ td, th{
     </div>
   </div>
 </footer>
-<!-- Bootstrap Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Script -->
+<!-- Menu Data -->
+<script src="menu.js"></script>
+
+<!-- Main Script -->
 <script>
-  function filterMenu(category, event = null) {
-    const buttons = document.querySelectorAll('.menu-tabs button');
-    buttons.forEach(btn => btn.classList.remove('active'));
+const menuTabs = document.getElementById('menuTabs');
+const menuList = document.getElementById('menuList');
 
-    // Apply active class either via event or by matching category
-    if (event) {
-      event.target.classList.add('active');
-    } else {
-      const activeBtn = Array.from(buttons).find(btn =>
-        btn.getAttribute('onclick')?.includes(`'${category}'`)
-      );
-      if (activeBtn) activeBtn.classList.add('active');
-    }
+const categoryLabels = {
+  starter: "Tandoori Starter",
+  chinese: "Chinese Special",
+  tawamaincourse: "Tawa Main Course",
+  mutton: "Mutton",
+  fish: "Fish",
+  roti: "Roti & Drink",
+  papad: "Papad",
+  rice: "Rice"
+};
 
-    const items = document.querySelectorAll('.menu-item');
-    items.forEach(item => {
-      if (item.dataset.category === category) {
-        item.style.display = 'flex';
-        item.classList.remove('fade-in');
-        void item.offsetWidth;
-        item.classList.add('fade-in');
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    // Show only starter items and set its tab as active
-    filterMenu('starter');
-
-    // Enable image popup
-    document.querySelectorAll('.menu-item img').forEach(img => {
-      img.addEventListener('click', () => {
-        document.getElementById('modalImage').src = img.src;
-        new bootstrap.Modal(document.getElementById('imageModal')).show();
-      });
-    });
+function createTabs(data) {
+  menuTabs.innerHTML = '';
+  data.forEach((cat, index) => {
+    const label = categoryLabels[cat.category] || (cat.category.charAt(0).toUpperCase() + cat.category.slice(1));
+    const btn = document.createElement('button');
+    btn.className = `btn btn-sm btn-outline-secondary${index === 0 ? ' active' : ''}`;
+    btn.textContent = label;
+    btn.onclick = function () {
+      filterMenu(cat.category, this);
+    };
+    menuTabs.appendChild(btn);
   });
+}
+
+function renderMenuItems(items, category = '') {
+  menuList.innerHTML = '';
+
+  items.forEach(item => {
+    const isSinglePriceCategory = ['roti', 'papad'].includes(category);
+    const half = item.half !== undefined ? `₹${item.half}` : '';
+    const full = item.full !== undefined ? `₹${item.full}` : '';
+    const price = item.price !== undefined ? `₹${item.price}` : '';
+
+    const priceHTML = isSinglePriceCategory
+      ? `<span class="fw-semibold text-dark">${price}</span>` // just one price
+      : `<div class="d-flex gap-1">
+           ${half ? `<span class="badge bg-light text-dark border">H ${half}</span>` : ''}
+           ${full ? `<span class="badge bg-light text-dark border">F ${full}</span>` : ''}
+         </div>`;
+
+    const card = `
+      <div class="col">
+        <div class="menu-item mb-1 d-flex justify-content-between align-items-center border rounded shadow-sm gap-1">
+          <div class="d-flex align-items-center">
+            <span class="fw-semibold">${item.name}</span>
+          </div>
+          <div class="d-flex flex-column align-items-end text-end">
+            ${priceHTML}
+          </div>
+        </div>
+      </div>`;
+    menuList.innerHTML += card;
+  });
+}
+
+
+function filterMenu(category, btn) {
+  document.querySelectorAll('.menu-tabs .btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const found = menuData.find(cat => cat.category === category);
+  if (found) {
+    renderMenuItems(found.items, category); // important
+  } else {
+    renderMenuItems([], category);
+  }
+}
+
+createTabs(menuData);
+const firstCategory = menuData[0];
+if (firstCategory) {
+  renderMenuItems(firstCategory.items);
+}
 </script>
 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
