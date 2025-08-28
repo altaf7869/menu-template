@@ -257,16 +257,35 @@
 const menuTabs = document.getElementById('menuTabs');
 const menuList = document.getElementById('menuList');
 
+// const categoryLabels = {
+//   starter: "Tandoori Starter",
+//   chinese: "Chinese Special",
+//   tawamaincourse: "Tawa Main Course",
+//   mutton: "Mutton",
+//   fish: "Fish",
+//   roti: "Roti & Drink",
+//   papad: "Papad",
+//   rice: "Rice"
+// };
 const categoryLabels = {
-  starter: "Tandoori Starter",
-  chinese: "Chinese Special",
+  tandoori_starter: "Tandoori Starters",
+  chinese_soup: "Chinese Soup",
+  mughlai_maincourse: "Mughlai Maincourse",
+  salad: "Salads",
   tawamaincourse: "Tawa Main Course",
-  mutton: "Mutton",
-  fish: "Fish",
-  roti: "Roti & Drink",
-  papad: "Papad",
-  rice: "Rice"
+  paneer: "Paneer Special",
+  chicken: "Chicken Dishes",
+  mutton: "Mutton Dishes",
+  fish: "Fish & Seafood",
+  biryani: "Biryani Specials",
+  rice: "Rice & Fried Rice",
+  roti: "Roti Ki Tokri",
+  papad: "Papad & Snacks",
+  dal: "Dal & Curry",
+  beverages: "Beverages & Soft Drinks",
+  desserts: "Desserts & Ice Creams"
 };
+
 
 function createTabs(data) {
   menuTabs.innerHTML = '';
