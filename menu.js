@@ -13,12 +13,20 @@ const menuData = [
   },
   {
     "category": "tandooribbq",
-    "items":[
-    { "name": "Tangdi Kebab (2 pcs)", "price": 160 },
-    { "name": "Tangdi Kebab (4 pcs)", "price": 300 },
-    { "name": "Chicken Afghani", "price": 300 },
-    { "name": "Chicken Kalmi Kebab", "price": 280 }
-  ],
+    "items": [
+      { "name": "Hot & Sour Soup (Chicken)", "half": null, "full": 159 },
+      { "name": "Hot & Sour Soup (Fish)", "half": null, "full": 179 },
+      { "name": "Hot & Sour Soup (Prawns)", "half": null, "full": 179 },
+      { "name": "Lemon Coriander Soup (Chicken)", "half": null, "full": 159 },
+      { "name": "Lemon Coriander Soup (Fish)", "half": null, "full": 179 },
+      { "name": "Lemon Coriander Soup (Prawns)", "half": null, "full": 179 },
+      { "name": "Dragon Soup (Chicken)", "half": null, "full": 159 },
+      { "name": "Dragon Soup (Fish)", "half": null, "full": 179 },
+      { "name": "Dragon Soup (Prawns)", "half": null, "full": 179 },
+      { "name": "Manchow Soup (Chicken)", "half": null, "full": 159 },
+      { "name": "Manchow Soup (Fish)", "half": null, "full": 179 },
+      { "name": "Manchow Soup (Prawns)", "half": null, "full": 179 }
+    ]
   },
   {
     "category": "chinese_starter",
@@ -27,70 +35,54 @@ const menuData = [
     ]
   },
   {
-    "category": "chinesesoup",
+    "category": "mughlai_maincourse",
     "items": [
-    { "name": "Veg Manchow Soup", "price": 120 },
-    { "name": "Chicken Manchow Soup", "price": 150 },
-    { "name": "Sweet Corn Soup", "price": 120 },
-    { "name": "Chicken Sweet Corn Soup", "price": 150 }
-  ],
-  },
-  {
-    "category": "chinesestarter",
-    "items":[
-    { "name": "Veg Hakka Noodles", "price": 180 },
-    { "name": "Egg Hakka Noodles", "price": 200 },
-    { "name": "Chicken Hakka Noodles", "price": 220 },
-    { "name": "Veg Fried Rice", "price": 180 },
-    { "name": "Egg Fried Rice", "price": 200 },
-    { "name": "Chicken Fried Rice", "price": 220 }
-  ],
-  },
-  {
-    "category": "mughlai",
-    "items": [
-    { "name": "Butter Chicken (Half)", "price": 300 },
-    { "name": "Butter Chicken (Full)", "price": 580 },
-    { "name": "Chicken Tikka Masala", "price": 320 },
-    { "name": "Chicken Curry", "price": 280 },
-    { "name": "Mutton Rogan Josh", "price": 380 },
-    { "name": "Mutton Korma", "price": 400 }
-  ],
-  },
-  {
-    "category": "seafoodmughlai",
-    "items": [
-    { "name": "Fish Curry", "price": 350 },
-    { "name": "Prawns Curry", "price": 420 },
-    { "name": "Fish Masala", "price": 380 }
-  ],
-  },
-  {
-    "category": "ricebiryani",
-    "items": [
-    { "name": "Veg Pulao", "price": 200 },
-    { "name": "Egg Biryani", "price": 240 },
-    { "name": "Chicken Biryani", "price": 280 },
-    { "name": "Mutton Biryani", "price": 380 }
-  ],
+      { "name": "Chicken Masala", "half": 169, "full": 279 },
+      { "name": "Chicken Laziz Handi", "half": 199, "full": 329 },
+      { "name": "Chicken Afghani", "half": 199, "full": 329 },
+      { "name": "Chicken Tikka Masala", "half": 199, "full": 329 },
+      { "name": "Chicken Jaipuri (Boneless)", "half": 219, "full": 349 },
+      { "name": "Chicken Kadai", "half": 199, "full": 299 },
+      { "name": "Chicken Angara", "half": 209, "full": 309 },
+      { "name": "Chicken Kolhapuri", "half": 179, "full": 299 },
+      { "name": "Chicken Khurcham", "half": 179, "full": 299 },
+      { "name": "Chicken Irani Handi", "half": 199, "full": 299 },
+      { "name": "Chicken Banzara", "half": 199, "full": 329 },
+      { "name": "Butter Chicken", "half": 229, "full": 379 },
+      { "name": "Mutton Masala", "half": 249, "full": 429 },
+      { "name": "Mutton Do Pyaza", "half": 259, "full": 439 },
+      { "name": "Mutton Bhuna", "half": 249, "full": 429 },
+      { "name": "Mutton Rogan Josh", "half": 259, "full": 439 },
+      { "name": "Mutton Kadai", "half": 259, "full": 439 },
+      { "name": "Mutton Methi", "half": 259, "full": 429 },
+      { "name": "Mutton Kashmiri", "half": 259, "full": 439 },
+      { "name": "Chicken Maharaja (Boneless)", "half": null, "full": 449 },
+      { "name": "Chicken Sultani", "half": null, "full": 399 },
+      { "name": "Chicken Changezi", "half": null, "full": 399 },
+      { "name": "Murg Musallam", "half": null, "full": 999 },
+      { "name": "SS Special", "half": null, "full": 999 }
+    ]
   },
   {
     "category": "roti",
     "items": [
-    { "name": "Butter Roti", "price": 25 },
-    { "name": "Butter Naan", "price": 40 },
-    { "name": "Garlic Naan", "price": 50 },
-    { "name": "Tandoori Roti", "price": 20 },
-    { "name": "Paratha", "price": 40 }
-  ],
+      { "name": "Plain Tandoori Roti", "price": 20 },
+      { "name": "Butter Tandoori Roti", "price": 25 },
+      { "name": "Lachha Paratha", "price": 40 },
+      { "name": "Butter Naan", "price": 45 },
+      { "name": "Garlic Naan", "price": 60 },
+      { "name": "Butter Kulcha", "price": 65 },
+      { "name": "Cheez Naan", "price": 140 }
+    ]
   },
-    {
+  {
     "category": "beverages",
     "items": [
-    { "name": "Mineral Water", "price": 20 },
-    { "name": "Soft Drinks", "price": 40 },
-    { "name": "Buttermilk", "price": 50 },
-    { "name": "Lassi", "price": 60 }
-  ]
+      { "name": "Mineral Water 500ml", "price": 10 },
+      { "name": "Mineral Water 1ltr", "price": 20 },
+      { "name": "Butter Milk", "price": 35 },
+      { "name": "Soft Drink", "price": 20 },
+      { "name": "Jeeru", "price": 10 }
+    ]
   }
 ];
