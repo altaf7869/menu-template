@@ -273,6 +273,7 @@ const menuList = document.getElementById('menuList');
 const categoryLabels = {
   tandooristarter: "Tandoori Starters",
   chinesestarter: "Chinese Starter",
+  chinesesoup: "Chinese Soup",
   chinesenoodlesrice: "Chinese Noodles & Rice",
   seafoodmughlai: "Sea Food Mughlai",
   mughlaimaincourse:"Mughlai Main Course",
@@ -300,7 +301,7 @@ function renderMenuItems(items, category = '') {
   menuList.innerHTML = '';
 
   items.forEach(item => {
-    const isSinglePriceCategory = ['rotikitokri', 'beverages'].includes(category);
+    const isSinglePriceCategory = ['rotikitokri', 'beverages', 'chinesestarter', 'chinesesoup', 'chinesenoodlesrice','seafoodmughlai'].includes(category);
     const half = item.half !== null ? `₹${item.half}` : '-';
     const full = item.full !== null ? `₹${item.full}` : '-';
     const price = item.price !== null ? `₹${item.price}` : '-';

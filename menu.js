@@ -2,132 +2,156 @@ const menuData = [
   {
   "category": "tandooristarter",
   "items": [
-    { "name": "TANDOORI BBQ", "half": 219, "full": 399 },
-    { "name": "NIZAMI TANDOORI", "half": 239, "full": 449 },
-    { "name": "CHICKEN BARRA TANDOOR", "half": 279, "full": 499 },
-    { "name": "SIZZLING TANDOORI", "half": 279, "full": 499 },
-    { "name": "SIZZLING PATHANI", "half": 279, "full": 499 },
-    { "name": "JALANDARI TIKKA", "half": null, "full": 299 },
-    { "name": "SIKANDARI TIKKA", "half": null, "full": 299 },
-    { "name": "PASTO KABAB", "half": null, "full": 299 },
-    { "name": "NIZAMI TIKKA", "half": null, "full": 299 },
-    { "name": "MALAI TIKKA", "half": null, "full": 299 },
-    { "name": "CHICKEN GAUTI TIKKA", "half": null, "full": 269 },
-    { "name": "JAIPURI TIKKA", "half": null, "full": 269 },
-    { "name": "BANZARA TIKKA", "half": null, "full": 249 },
-    { "name": "GREEN CHILLI TIKKA", "half": null, "full": 249 },
-    { "name": "GREEN PAHADI TIKKA", "half": null, "full": 249 },
-    { "name": "FISH TIKKA", "half": null, "full": 329 },
-    { "name": "FISH LASANIA TIKKA", "half": null, "full": 339 },
-    { "name": "FISH BANSARA TIKKA", "half": null, "full": 339 },
-    { "name": "FISH MALAI TIKKA", "half": null, "full": 339 },
-    { "name": "FISH GREEN CHILLI TIKKA", "half": null, "full": 339 },
-    { "name": "SABNAM SEEKH", "half": null, "full": 229 },
-    { "name": "MUTTON GILAFI SEEKH", "half": null, "full": 299 },
-    { "name": "CHICKEN GILAFI SEEKH", "half": null, "full": 249 },
-    { "name": "MUTTON SEEKH", "half": null, "full": 279 },
-    { "name": "CHICKEN SEEKH", "half": null, "full": 229 },
-    { "name": "TANDOORI CREAM LEG", "half": 179, "full": null },
-    { "name": "GOLDEN LEG", "half": 139, "full": null },
-    { "name": "TANDOORI LEG", "half": 139, "full": null },
-    { "name": "GOLDEN CREAM LEG", "half": 179, "full": null },
-    { "name": "GOLDEN CHEEZ LEG", "half": 189, "full": null },
-    { "name": "MUTTON BBQ", "half": 329, "full": 549 },
-    { "name": "MUTTON ROASTED", "half": 319, "full": 529 },
-    { "name": "MUTTON MASALA", "half": 329, "full": 549 },
-    { "name": "MUTTON BARRA", "half": 329, "full": 549 }
+    { "name": "Tandoori Bbq", "half": 219, "full": 399 },
+    { "name": "Nizami Tandoori", "half": 239, "full": 449 },
+    { "name": "Chicken Barra Tandoor", "half": 279, "full": 499 },
+    { "name": "Sizzling Tandoori", "half": 279, "full": 499 },
+    { "name": "Sizzling Pathani", "half": 279, "full": 499 },
+    { "name": "Jalandari Tikka", "half": null, "full": 299 },
+    { "name": "Sikandari Tikka", "half": null, "full": 299 },
+    { "name": "Pasto Kabab", "half": null, "full": 299 },
+    { "name": "Nizami Tikka", "half": null, "full": 299 },
+    { "name": "Malai Tikka", "half": null, "full": 299 },
+    { "name": "Chicken Gauti Tikka", "half": null, "full": 269 },
+    { "name": "Jaipuri Tikka", "half": null, "full": 269 },
+    { "name": "Banzara Tikka", "half": null, "full": 249 },
+    { "name": "Green Chilli Tikka", "half": null, "full": 249 },
+    { "name": "Green Pahadi Tikka", "half": null, "full": 249 },
+    { "name": "Fish Tikka", "half": null, "full": 329 },
+    { "name": "Fish Lasania Tikka", "half": null, "full": 339 },
+    { "name": "Fish Bansara Tikka", "half": null, "full": 339 },
+    { "name": "Fish Malai Tikka", "half": null, "full": 339 },
+    { "name": "Fish Green Chilli Tikka", "half": null, "full": 339 },
+    { "name": "Sabnam Seekh", "half": null, "full": 229 },
+    { "name": "Mutton Gilafi Seekh", "half": null, "full": 299 },
+    { "name": "Chicken Gilafi Seekh", "half": null, "full": 249 },
+    { "name": "Mutton Seekh", "half": null, "full": 279 },
+    { "name": "Chicken Seekh", "half": null, "full": 229 },
+    { "name": "Tandoori Cream Leg", "half": 179, "full": null },
+    { "name": "Golden Leg", "half": 139, "full": null },
+    { "name": "Tandoori Leg", "half": 139, "full": null },
+    { "name": "Golden Cream Leg", "half": 179, "full": null },
+    { "name": "Golden Cheez Leg", "half": 189, "full": null },
+    { "name": "Mutton Bbq", "half": 329, "full": 549 },
+    { "name": "Mutton Roasted", "half": 319, "full": 529 },
+    { "name": "Mutton Masala", "half": 329, "full": 549 },
+    { "name": "Mutton Barra", "half": 329, "full": 549 },
+    { "name": "SS Special Mutton", "half": 329, "full": 559 }
   ]
 },
 {
   "category": "chinesestarter",
   "items": [
-    { "name": "CH Drum of Heaven (Chicken)", "half": null, "full": 319 },
-    { "name": "CH Drum of Heaven (Fish)", "half": null, "full": null },
-    { "name": "CH Drum of Heaven (Prawns)", "half": null, "full": null },
+    { "name": "CH Drum of Heaven (Chicken)", "price": 319 },
 
-    { "name": "CH Lollipop Schezwan (Chicken)", "half": null, "full": 279 },
-    { "name": "CH Lollipop Schezwan (Fish)", "half": null, "full": 359 },
-    { "name": "CH Lollipop Schezwan (Prawns)", "half": null, "full": 419 },
+    { "name": "CH Lollipop Schezwan (Chicken)", "price": 279 },
+    { "name": "CH Lollipop Schezwan (Fish)", "price": 359 },
+    { "name": "CH Lollipop Schezwan (Prawns)", "price": 419 },
 
-    { "name": "Fried Lolipop (Chicken)", "half": null, "full": 279 },
-    { "name": "Fried Lolipop (Fish)", "half": null, "full": null },
-    { "name": "Fried Lolipop (Prawns)", "half": null, "full": null },
+    { "name": "Fried Lolipop (Chicken)", "price": 279 },
 
-    { "name": "Kaju Chilli (Chicken)", "half": null, "full": 359 },
-    { "name": "Kaju Chilli (Fish)", "half": null, "full": null },
-    { "name": "Kaju Chilli (Prawns)", "half": null, "full": null },
+    { "name": "Kaju Chilli (Chicken)", "price": 359 },
 
-    { "name": "Chilly (Chicken)", "half": null, "full": 329 },
-    { "name": "Chilly (Fish)", "half": null, "full": 379 },
-    { "name": "Chilly (Prawns)", "half": null, "full": 469 },
+    { "name": "Chilly (Chicken)", "price": 329 },
+    { "name": "Chilly (Fish)", "price": 379 },
+    { "name": "Chilly (Prawns)", "price": 469 },
 
-    { "name": "Crispy (Chicken)", "half": null, "full": 329 },
-    { "name": "Crispy (Fish)", "half": null, "full": 419 },
-    { "name": "Crispy (Prawns)", "half": null, "full": 469 },
+    { "name": "Crispy (Chicken)", "price": 329 },
+    { "name": "Crispy (Fish)",  "price": 419 },
+    { "name": "Crispy (Prawns)", "price": 469 },
 
-    { "name": "Kung Pao Chilli (Chicken)", "half": null, "full": 359 },
-    { "name": "Kung Pao Chilli (Fish)", "half": null, "full": 419 },
-    { "name": "Kung Pao Chilli (Prawns)", "half": null, "full": 469 },
+    { "name": "Kung Pao Chilli (Chicken)", "price": 359 },
+    { "name": "Kung Pao Chilli (Fish)", "price": 419 },
+    { "name": "Kung Pao Chilli (Prawns)", "price": 469 },
 
-    { "name": "Salt Paper (Chicken)", "half": null, "full": 359 },
-    { "name": "Salt Paper (Fish)", "half": null, "full": 419 },
-    { "name": "Salt Paper (Prawns)", "half": null, "full": 469 },
+    { "name": "Salt Paper (Chicken)", "price": 359 },
+    { "name": "Salt Paper (Fish)", "price": 419 },
+    { "name": "Salt Paper (Prawns)", "price": 469 },
 
-    { "name": "Teriyaki Chilli (Chicken)", "half": null, "full": 359 },
-    { "name": "Teriyaki Chilli (Fish)", "half": null, "full": 419 },
-    { "name": "Teriyaki Chilli (Prawns)", "half": null, "full": 469 },
+    { "name": "Teriyaki Chilli (Chicken)", "price": 359 },
+    { "name": "Teriyaki Chilli (Fish)", "price": 419 },
+    { "name": "Teriyaki Chilli (Prawns)", "price": 469 },
 
-    { "name": "Slice Lemon Paper (Chicken)", "half": null, "full": 359 },
-    { "name": "Slice Lemon Paper (Fish)", "half": null, "full": 419 },
-    { "name": "Slice Lemon Paper (Prawns)", "half": null, "full": null },
+     { "name": "Slice Lemon Paper (Chicken)","price": 359 },
+    { "name": "Slice Lemon Paper (Fish)", "price": 419 },
 
-    { "name": "Dubai Chilli (Chicken)", "half": null, "full": 419 },
-    { "name": "Dubai Chilli (Fish)", "half": null, "full": 459 },
-    { "name": "Dubai Chilli (Prawns)", "half": null, "full": null }
+    { "name": "Lemon Slice Cruncy (Chicken)","price": 359 },
+    { "name": "Lemon Slice Cruncy (Fish)", "price": 419 },
+     { "name":"Lemon Slice Cruncy (Prawns)", "price": 469 },
+
+    { "name": "CH Honey Chilli (Chicken)", "price": 359 },
+    { "name": "CH Honey Chilli (Fish)", "price": 419 },
+    { "name": "CH Honey Chilli (Prawns)", "price": 469 },
+
+    { "name": "Dubai Chilli (Chicken)", "price": 419 },
+    { "name": "Dubai Chilli (Fish)", "price": 459 },
+
+    { "name": "Butter Garlic Dry (Chicken)", "price": 419 },
   ]
 },
 {
+  "category": "chinesesoup",
+  "items": [
+    { "name": "Hot & Sour Soup (Chicken)", "price": 159 },
+    { "name": "Hot & Sour Soup (Fish)", "price": 179 },
+    { "name": "Hot & Sour Soup (Prawns)", "price": 179 },
+
+    { "name": "Lemon Coriander Soup (Chicken)", "price": 159 },
+    { "name": "Lemon Coriander Soup (Fish)", "price": 179 },
+    { "name": "Lemon Coriander Soup (Prawns)", "price": 179 },
+
+    { "name": "Dragon Soup (Chicken)", "price": 159 },
+    { "name": "Dragon Soup (Fish)", "price": 179 },
+    { "name": "Dragon Soup (Prawns)", "price": 179 },
+
+    { "name": "Manchow Soup (Chicken)", "price": 159 },
+    { "name": "Manchow Soup (Fish)", "price": 179 },
+    { "name": "Manchow Soup (Prawns)", "price": 179 }
+  ]
+},
+
+{
   "category": "chinesenoodlesrice",
   "items": [
-    { "name": "Fried Rice (Chicken)", "half": null, "full": 269 },
-    { "name": "Fried Rice (Fish)", "half": null, "full": 349 },
-    { "name": "Fried Rice (Prawns)", "half": null, "full": 399 },
+    { "name": "Fried Rice (Chicken)", "price": 269 },
+    { "name": "Fried Rice (Fish)", "price": 349 },
+    { "name": "Fried Rice (Prawns)", "price": 399 },
 
-    { "name": "Triple Rice (Chicken)", "half": null, "full": 269 },
-    { "name": "Triple Rice (Fish)", "half": null, "full": 349 },
-    { "name": "Triple Rice (Prawns)", "half": null, "full": 399 },
+    { "name": "Triple Rice (Chicken)", "price": 269 },
+    { "name": "Triple Rice (Fish)", "price": 349 },
+    { "name": "Triple Rice (Prawns)", "price": 399 },
 
-    { "name": "Oriental Pot Rice (Chicken)", "half": null, "full": 269 },
-    { "name": "Oriental Pot Rice (Fish)", "half": null, "full": 349 },
-    { "name": "Oriental Pot Rice (Prawns)", "half": null, "full": 399 },
+    { "name": "Oriental Pot Rice (Chicken)", "price": 269 },
+    { "name": "Oriental Pot Rice (Fish)", "price": 349 },
+    { "name": "Oriental Pot Rice (Prawns)", "price": 399 },
 
-    { "name": "Burnt Garlic Rice/Noodles (Chicken)", "half": null, "full": 269 },
-    { "name": "Burnt Garlic Rice/Noodles (Fish)", "half": null, "full": 349 },
-    { "name": "Burnt Garlic Rice/Noodles (Prawns)", "half": null, "full": 399 },
+    { "name": "Burnt Garlic Rice/Noodles (Chicken)", "price": 269 },
+    { "name": "Burnt Garlic Rice/Noodles (Fish)", "price": 349 },
+    { "name": "Burnt Garlic Rice/Noodles (Prawns)", "price": 399 },
 
-    { "name": "Burnt Chilli Rice/Noodles (Chicken)", "half": null, "full": 269 },
-    { "name": "Burnt Chilli Rice/Noodles (Fish)", "half": null, "full": 349 },
-    { "name": "Burnt Chilli Rice/Noodles (Prawns)", "half": null, "full": 399 },
+    { "name": "Burnt Chilli Rice/Noodles (Chicken)", "price": 269 },
+    { "name": "Burnt Chilli Rice/Noodles (Fish)", "price": 349 },
+    { "name": "Burnt Chilli Rice/Noodles (Prawns)", "price": 399 },
 
-    { "name": "Singapori Rice/Noodles (Chicken)", "half": null, "full": 269 },
-    { "name": "Singapori Rice/Noodles (Fish)", "half": null, "full": 349 },
-    { "name": "Singapori Rice/Noodles (Prawns)", "half": null, "full": 399 },
+    { "name": "Singapori Rice/Noodles (Chicken)", "price": 269 },
+    { "name": "Singapori Rice/Noodles (Fish)", "price": 349 },
+    { "name": "Singapori Rice/Noodles (Prawns)", "price": 399 },
 
-    { "name": "Schezwan Rice/Noodles (Chicken)", "half": null, "full": 269 },
-    { "name": "Schezwan Rice/Noodles (Fish)", "half": null, "full": 349 },
-    { "name": "Schezwan Rice/Noodles (Prawns)", "half": null, "full": 399 },
+    { "name": "Schezwan Rice/Noodles (Chicken)", "price": 269 },
+    { "name": "Schezwan Rice/Noodles (Fish)", "price": 349 },
+    { "name": "Schezwan Rice/Noodles (Prawns)", "price": 399 },
 
-    { "name": "Korean Rice/Noodles (Chicken)", "half": null, "full": 269 },
-    { "name": "Korean Rice/Noodles (Fish)", "half": null, "full": 349 },
-    { "name": "Korean Rice/Noodles (Prawns)", "half": null, "full": 399 },
+    { "name": "Korean Rice/Noodles (Chicken)", "price": 269 },
+    { "name": "Korean Rice/Noodles (Fish)", "price": 349 },
+    { "name": "Korean Rice/Noodles (Prawns)", "price": 399 },
 
-    { "name": "Hakka Noodles (Chicken)", "half": null, "full": 269 },
-    { "name": "Hakka Noodles (Fish)", "half": null, "full": 349 },
-    { "name": "Hakka Noodles (Prawns)", "half": null, "full": 399 },
+    { "name": "Hakka Noodles (Chicken)", "price": 269 },
+    { "name": "Hakka Noodles (Fish)", "price": 349 },
+    { "name": "Hakka Noodles (Prawns)", "price": 399 },
 
-    { "name": "Chilli Garlic Noodles (Chicken)", "half": null, "full": 269 },
-    { "name": "Chilli Garlic Noodles (Fish)", "half": null, "full": 349 },
-    { "name": "Chilli Garlic Noodles (Prawns)", "half": null, "full": 399 }
+    { "name": "Chilli Garlic Noodles (Chicken)", "price": 269 },
+    { "name": "Chilli Garlic Noodles (Fish)", "price": 349 },
+    { "name": "Chilli Garlic Noodles (Prawns)", "price": 399 }
   ]
 },
 {
@@ -158,32 +182,36 @@ const menuData = [
     { "name": "Chicken Sultani", "half": null, "full": 399 },
     { "name": "Chicken Changezi", "half": null, "full": 399 },
     { "name": "Murg Musallam", "half": null, "full": 999 },
-    { "name": "SS Special", "half": null, "full": 999 }
+    { "name": "SS Special", "half": null, "full": null },
+
+    { "name": "Daal Fry", "half": 139, "full": null },
+     { "name": "Dall Tadka", "half": 149, "full": null },
+
   ]
 },
 {
   "category": "seafoodmughlai",
   "items": [
-    { "name": "Fish Curry", "half": null, "full": 339 },
-    { "name": "Fish Tikka Masala", "half": null, "full": 339 },
-    { "name": "Fish Kolhapuri", "half": null, "full": 339 },
-    { "name": "Prawns Curry", "half": null, "full": 389 },
-    { "name": "Prawns Tikka Masala", "half": null, "full": 389 },
-    { "name": "Prawns Kolhapuri", "half": null, "full": 389 }
+    { "name": "Fish Curry", "price": 339 },
+    { "name": "Fish Tikka Masala","price": 339 },
+    { "name": "Fish Kolhapuri", "price": 339 },
+    { "name": "Prawns Curry", "price": 389 },
+    { "name": "Prawns Tikka Masala", "price": 389 },
+    { "name": "Prawns Kolhapuri", "price": 389 }
   ]
 },
 {
   "category": "ricebiryani",
   "items": [
-    { "name": "Steam Rice", "half": null, "full": 99 },
-    { "name": "Jeera Rice", "half": null, "full": 129 },
-    { "name": "Chicken Biriyani", "half": 229, "full": 129 },
-    { "name": "Chicken Tikka Biriyani", "half": 239, "full": 139 },
-    { "name": "Mutton Biriyani", "half": 389, "full": null },
-    { "name": "Fish Biriyani", "half": 349, "full": 199 },
-    { "name": "Prawns Biriyani", "half": 379, "full": 229 },
-    { "name": "Egg Pulao", "half": 139, "full": null },
-    { "name": "Egg Biriyani", "half": 169, "full": null }
+    { "name": "Steam Rice", "half": 99, "full": null },
+    { "name": "Jeera Rice", "half": 129, "full": null },
+    { "name": "Chicken Biriyani", "half": 129, "full": 229 },
+    { "name": "Chicken Tikka Biriyani", "half": 139, "full": 239 },
+    { "name": "Mutton Biriyani", "half": null, "full": 389 },
+    { "name": "Fish Biriyani", "half": 199, "full": 349 },
+    { "name": "Prawns Biriyani", "half": 229, "full": 379 },
+    { "name": "Egg Pulao", "half": null, "full": 139 },
+    { "name": "Egg Biriyani", "half": null, "full": 169 }
   ]
 },
 {
@@ -195,7 +223,11 @@ const menuData = [
     { "name": "Butter Naan", "price": 45 },
     { "name": "Garlic Naan", "price": 60 },
     { "name": "Butter Kulcha", "price": 65 },
-    { "name": "Cheez Naan", "price": 140 }
+    { "name": "Cheez Naan", "price": 140 },
+    { "name": "Masala Papad", "price": 60 },
+    { "name": "Masala Cheese Papad", "price": 69 },
+    { "name": "Roasted Papad", "price": 15 },
+    { "name": "Fry Papad", "price": 20 }
   ]
 },
 {
@@ -203,9 +235,10 @@ const menuData = [
   "items": [
     { "name": "Mineral Water 500ml", "price": 10 },
     { "name": "Mineral Water 1ltr", "price": 20 },
-    { "name": "Butter Milk", "price": 35 },
+    { "name": "Jeeru", "price": 10 },
     { "name": "Soft Drink", "price": 20 },
-    { "name": "Jeeru", "price": 10 }
+    { "name": "Butter Milk", "price": 35 },
+    { "name": "Caramel Custard", "price": 59 },
   ]
 }
 ];
