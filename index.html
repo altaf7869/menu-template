@@ -231,9 +231,9 @@
       <div class="col-md-4 mb-3">
         <h5>CONTACT US</h5>
         <p>
-          <strong>Location:</strong> Sh. No. A-7, Shreya Avenue, Akota Garden Main Rd, opp. Shell petrol pump, Pratham Avenue, Akota, Vadodara, Gujarat 390020<br>
+          <strong><i class="bi bi-geo-alt-fill"></i> </strong> 30, Saptagiri Complex, Opp. Hotel Taj Vivanta, Akota Garden Main Road, Akota, Vadodara<br>
           <br>
-          <strong>Phone:</strong> +91 7878662277 <br> +91 8401015874<br>
+          <strong><i class="bi bi-phone-fill"></i> </strong> +91 7878662277 <br> +91 8401015874<br>
           <!-- <strong>Email:</strong> info@sskitchen.com -->
         </p>
         
@@ -300,32 +300,49 @@ function createTabs(data) {
 function renderMenuItems(items, category = '') {
   menuList.innerHTML = '';
 
-  items.forEach(item => {
-    const isSinglePriceCategory = ['rotikitokri', 'beverages', 'chinesestarter', 'chinesesoup', 'chinesenoodlesrice','seafoodmughlai'].includes(category);
-    const half = item.half !== null ? `₹${item.half}` : '-';
-    const full = item.full !== null ? `₹${item.full}` : '-';
-    const price = item.price !== null ? `₹${item.price}` : '-';
+items.forEach(item => {
+  const isSinglePriceCategory = ['rotikitokri', 'beverages', 'chinesestarter', 'chinesesoup', 'chinesenoodlesrice','seafoodmughlai'].includes(category);
+  const half = item.half !== null ? `${item.half}` : null;
+  const full = item.full !== null ? `${item.full}` : null;
+  const price = item.price !== null ? `${item.price}` : '-';
 
-    const priceHTML = isSinglePriceCategory
-      ? `<span class="fw-semibold text-dark">${price}</span>` // just one price
-      : `<div class="d-flex gap-1">
-           ${half ? `<span class="badge bg-light text-dark border">H ${half}</span>` : ''}
-           ${full ? `<span class="badge bg-light text-dark border">F ${full}</span>` : ''}
-         </div>`;
+  let priceHTML;
 
-    const card = `
-      <div class="col">
-        <div class="menu-item mb-1 d-flex justify-content-between align-items-center border rounded shadow-sm gap-1">
-          <div class="d-flex align-items-center">
-            <span class="fw-semibold">${item.name}</span>
-          </div>
-          <div class="d-flex flex-column align-items-end text-end">
-            ${priceHTML}
-          </div>
+  if (isSinglePriceCategory) {
+    // Just one price
+    priceHTML = `<span class="fw-semibold text-dark">${price}</span>`;
+  } else {
+    // Multiple prices
+    if (half && full) {
+      // Both exist → show H and F
+      priceHTML = `<div class="d-flex gap-1">
+                     <span class="badge bg-light text-dark border">H ${half}</span>
+                     <span class="badge bg-light text-dark border">F ${full}</span>
+                   </div>`;
+    } else if (half || full) {
+      // Only one exists → show plain price without H/F
+      priceHTML = `<span class="fw-semibold text-dark">${half || full}</span>`;
+    } else {
+      priceHTML = '-';
+    }
+  }
+
+  const card = `
+    <div class="col">
+      <div class="menu-item mb-1 d-flex justify-content-between align-items-center border rounded shadow-sm gap-1">
+        <div class="d-flex align-items-center">
+          <span class="fw-semibold">${item.name}</span>
         </div>
-      </div>`;
-    menuList.innerHTML += card;
-  });
+        <div class="d-flex flex-column align-items-end text-end">
+          ${priceHTML}
+        </div>
+      </div>
+    </div>`;
+
+  menuList.innerHTML += card;
+});
+
+
 }
 
 
