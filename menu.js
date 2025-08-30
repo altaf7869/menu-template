@@ -224,7 +224,7 @@ const menuData = [
     { "name": "Garlic Naan", "price": 60 },
     { "name": "Butter Kulcha", "price": 65 },
     { "name": "Cheez Naan", "price": 140 },
-    { "name": "Masala Papad", "price": 60 },
+    { "name": "Masala Papad", "price": 49 },
     { "name": "Masala Cheese Papad", "price": 69 },
     { "name": "Roasted Papad", "price": 15 },
     { "name": "Fry Papad", "price": 20 }
@@ -237,7 +237,7 @@ const menuData = [
     { "name": "Mineral Water 1ltr", "price": 20 },
     { "name": "Jeeru", "price": 10 },
     { "name": "Soft Drink", "price": 20 },
-    { "name": "Butter Milk", "price": 35 },
+    { "name": "Butter Milk", "price": 30 },
     { "name": "Caramel Custard", "price": 59 },
   ]
 }
